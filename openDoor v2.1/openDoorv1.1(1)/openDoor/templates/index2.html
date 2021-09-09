@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery.js"></script>
+        <link href="/static/bootstrap.min.css" rel="stylesheet">
+    <!--Mi estilo-->
+  <link rel="stylesheet" type="text/css" href="https://pixmy.github.io/style.css">
+  <!--Font awesome-->
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+  <!--FONTS-->
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Arvo:700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:900" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="https://pixmy.github.io/toggles-full.css">
+  <!--JQUERY-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <!--Animate-->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-visible/1.2.0/jquery.visible.min.js" type="text/javascript"></script>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-toggles/2.0.4/toggles.min.js"></script>
+
+    <title>Index2</title>
+</head>
+
+<body>
+<style>
+
+    body {
+        width: 100%;
+	min-height: 100vh;
+	background: url('../static/cloud.jpg') no-repeat center center fixed;
+	background-size: cover;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #212529;
+      text-align: left;
+      }
+
+.container{
+           position:relative;
+           text-align: center;
+           background: rgba(246, 221, 156, 0.68);
+           border-radius: 25px;
+           margin: auto 0;
+          margin-left: 150px;
+          top: 100px;
+          font-size: 20px;
+           padding: 60px;
+           box-shadow: 10px 10px 5px rgba(191, 170, 116,0.3);
+           line-height: 30px;
+
+       }
+.buttonCollection{
+  position: absolute;
+  top: 550px;
+  height: 70px;
+  width: 700px;
+  left: 20%
+}
+  .position-1{
+    position: absolute;
+    left: 500px;
+
+
+
+       }
+       .position{
+         position: absolute;
+         left: 0;
+
+       }
+		</style>
+    <style>
+        .button {
+    position: relative;
+       left: 50%;
+
+  background-color: transparent;
+  border: 2px solid yellow;
+  border-radius: 4px;
+  display: inline-block;
+  color: #ffff54;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
+  height: 50px;
+  line-height: 40px;
+  letter-spacing: 1.2px;
+  margin: 5px;
+  overflow: hidden;
+  padding: 0 25px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all .2s ease-in-out;
+
+
+}
+
+.button:hover{
+    background-color: rgba(245, 220, 155, 0.68);
+}
+
+.roll-text {
+  display: block;
+  position: relative;
+  transition: all 420ms cubic-bezier(.175,.885,.32,1.275);
+}
+
+.roll-text:last-child {
+  color: #fff;
+}
+
+.rollover:hover .roll-text:first-child {
+  margin-top: -38px;
+}
+
+</style>
+<style>
+    h1 {
+  font-family: "Archivo Black", sans-serif;
+  font-weight: normal;
+  font-size: 2em;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+        line-height: 1.5em;
+}
+    .gradient-text {
+  /* Create the gradient. */
+   background-image: linear-gradient(
+        275deg,
+        rgba(202, 66, 70, 0.7) 16.666%,
+        #E16541 16.666%,
+        #E16541 33.333%,
+        #F18F43 33.333%,
+        #F18F43 50%,
+        #8B9862 50%,
+        #8B9862 66.666%,
+        #476098 66.666%,
+        #476098 83.333%,
+        rgba(167, 72, 155, 0.88) 83.333%);
+
+  /* Set the background size and repeat properties. */
+  background-size: 100%;
+  background-repeat: repeat;
+
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Animate the text when loading the element. */
+    /* This animates it on page load and when hovering out. */
+    animation: rainbow-text-simple-animation-rev 0.75s ease forwards;
+
+}
+
+.gradient-text:hover{
+    animation: rainbow-text-simple-animation 0.5s ease-in forwards;
+}
+
+
+/* Move the background and make it smaller. */
+/* Animation shown when entering the page and after the hover animation. */
+@keyframes rainbow-text-simple-animation-rev {
+    0% {
+        background-size: 100%;
+    }
+    40% {
+        background-size: 150%;
+    }
+        80% {
+        background-size: 450%;
+    }
+    100% {
+        background-size: 650%;
+    }
+}
+
+/* Move the background and make it larger. */
+/* Animation shown when hovering over the text. */
+@keyframes rainbow-text-simple-animation {
+    0% {
+        background-size: 650%;
+    }
+    40%{
+        background-size: 450%;
+    }
+    80% {
+        background-size: 150%;
+    }
+    100% {
+        background-size: 100%;
+    }
+}
+
+</style>
+<div class="container animated fadeInLeft" >
+<div class="gradient-text">
+            <h1><b  >Are you ready to enter Agora 1.0 and begin your Entrepreneurial journey? </b>  </h1>
+                <h1 ><b>Let’s begin!</b>  </h1>
+</div>
+</div>
+
+
+<div class="buttonCollection  animated fadeInLeft">
+     <div class=" position wrap">
+  <a href="game.html" class="button rollover"  >
+ <span class="roll-text">start</span>
+    <span class="roll-text">Let's Go</span>
+  </a>
+ </div>
+  <div class="position-1 wrap "  >
+  <a href="instruction.html" class="button rollover"  >
+ <span class="roll-text">instruction</span>
+    <span class="roll-text">Let's Go</span>
+  </a>
+  </div>
+ </div>
+
+</body>
+</html>

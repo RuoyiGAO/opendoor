@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width" />
+  <title>instruction</title>
+  <!--Mi estilo-->
+  <link rel="stylesheet" type="text/css" href="https://pixmy.github.io/style.css">
+  <!--Font awesome-->
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+  <!--FONTS-->
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Arvo:700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:900" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="https://pixmy.github.io/toggles-full.css">
+  <!--JQUERY-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <!--Animate-->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-visible/1.2.0/jquery.visible.min.js" type="text/javascript"></script>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-toggles/2.0.4/toggles.min.js"></script>
+<script>
+
+    var firmacount = 0;
+    $(document).ready(function(){
+
+
+        $(function(){
+          // get hash value
+          var hash = window.location.hash;
+          // now scroll to element with that id
+          $('html, body').animate({ scrollTop: $(hash).offset().top });
+        });
+
+        var altura = $(".body").height();
+        var ancho = $(".body").width();
+
+        $(".start").css("height",altura+"px");
+        $(".start").css("width",ancho+"px");
+        $("#first").css("margin-top",altura+"px");
+
+        $("#hire").on("click", function(){
+            $(this).toggleClass("hireClick");
+            $('.info').toggleClass("displaySee");
+        });
+
+        $('.toggle').toggles({
+          drag: true, // allow dragging the toggle between positions
+          click: true, // allow clicking on the toggle
+          text: {
+            on: 'English', // text for the ON position Inglés
+            off: 'Español' // and off
+          },
+          on: true, // is the toggle ON on init
+          animate: 250, // animation time (ms)
+          width: 100, // width used if not set in css
+          height: 30, // height if not set in css
+        });
+
+
+        ingles();
+
+        $('.toggle').on('toggle', function(e, active) {
+          if (active) {
+            ingles();
+          } else {
+            espanol();
+          }});
+
+    });
+
+    $(window).resize(function(){
+        var altura = $(".body").height();
+        var ancho = $(".body").width();
+
+        $(".start").css("height",altura+"px");
+        $(".start").css("width",ancho+"px");
+        $("#first").css("margin-top",altura+"px");
+    });
+
+    $( ".body" ).scroll(function() {
+        if ($('.line').visible(true,true)) {
+            $(".background").css("background", "linear-gradient(#2ecc71, #16a085)");
+        }
+
+        if ($('.show1').visible(false,true)) {
+            $('.show1').addClass("animated slideInLeft visible");
+            $('.show1').removeClass("hidden");
+            $(".background").css("background", "linear-gradient(#ecf0f1, #7f8c8d)");
+        }
+
+        if ($('.show2').visible(true,true)) {
+            $('.show2').addClass("animated slideInRight visible");
+        }
+
+        if ($('.show3').visible(true,true)) {
+            $('.show3').addClass("animated slideInLeft visible");
+            $(".background").css("background", "linear-gradient(#1abc9c, #16a085)");
+        }
+        if($(".firma").visible(true)&& firmacount == 0){
+            firmacount = 0;
+            var paths = $('#svg4166 path:not(defs path)');
+            paths.each(function(i, e) {
+                e.style.strokeDasharray = e.style.strokeDashoffset = e.getTotalLength();
+            });
+            var tl = new TimelineMax();
+            tl.add([
+                TweenLite.to(paths.eq(0), 4, {
+                    strokeDashoffset: 0,
+                    delay: 0.0,
+                    autoAlpha: 1
+                })
+            ]);
+        }
+    });
+
+    function ingles(){
+        $(".espanol").hide();
+        $(".ingles").show();
+    }
+
+    function espanol(){
+        $(".ingles").hide();
+        $(".espanol").show();
+    }
+
+
+</script>
+</head>
+
+<body>
+  <div class="background"></div>
+
+<div class="load">
+  <hr/><hr/><hr/><hr/>
+</div>
+
+  <div class="start">
+
+    <div class='box'>
+      <div class='wave -one'></div>
+      <div class='wave -two'></div>
+      <div class='wave -three'></div>
+    </div>
+    <div class="line"></div>
+    <div class="line2"></div>
+    <div class="center">
+      <div class="nombre animated fadeInLeft">
+        <p>INSTRUCTIONS</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="body" id="body">
+    <div class="square  " id="first" >
+         <div class="squareTitleRight animated fadeInRight "  >
+             <h1 style="color:  #fcdec6"><b>In Agora 1.0, you will get 4 cards which is respectively 1 'Customer', 2 'Plan with This' and 1 'Role Play'. </b></h1>
+         </div>
+        <div class="animated fadeInDown "  >
+        <ul class="list">
+            <div class="purple-color">
+            <h2 class="purple-color" ><b>With these 4 cards, there are totally three things you need to do.</b></h2>
+            <p class="purple-color"><b>1. Brainstorm ideas in groups or individually according to the card which indicates customer.</b></p>
+            <p class="purple-color"><b>2. Think about potential problems for customers and plan solutions for them with the cards -- Plan with This and Role Play.</b></p>
+            <p class="purple-color"><b>3. Present your idea through answering questions.</b></p></div>
+        </ul>
+        </div>
+    </div>
+
+    <div class="square" id="second">
+        <div class="squareTitleRight animated fadeInRight "  >
+
+            <h1>Following are some important hints and tips for you to better enjoy Agora 1.0</h1>
+        </div>
+
+        <div class="animated fadeInDown " ><style>.sec-color{font-size: 20px; color:#FF8A80!important;line-height: 40px; left: 100px; }</style>
+        <div class="sec-color " >
+            <ul class="list">
+            <p class="sec-color">To begin with, the guideline leading the formulation of business plans is to have enough room for business growth. In this case, your business can be seen like a start-up and is possible for your business to be fantastic, realistic, and scalable and quickly gains traction.</p>
+
+            <p class="sec-color" ><b>In the process of problem positioning,valuable problems should be popular, growing and urgent.</b></p>
+
+            <p class="sec-color">Popular means this problem is faced by many people. </p>
+            <p class="sec-color">Growing will give this business more and more customers. </p>
+            <p class="sec-color">Urgent means the positioning of problems is sharp and accurate.</p>
+
+            <p class="sec-color">Also, you need to consider: Is it a mandatory and expensive problem? And Recurring and frequent problems?</p>
+            <p class="sec-color"><b>In the process of thinking about solutions,</b></p>
+
+            <p class="sec-color">Your solutions must be directly related to motivation (your reason to identify the problem), Ability (Your business idea) and Trigger (Your solution should trigger the consumer to incorporate your solution into their lives).Besides, you need some raw data to support the feasibility of the solution, which may come from focus groups, product-market-fit test or something.</p>
+
+            <p class="sec-color"><b>After brainstorming and early-stage idea generation, you can reflect your idea by following these questions.</b></p>
+
+            <p class="sec-color">	   What are your insights from the initial raw data?</p>
+            <p class="sec-color">	What is your competitive advantage over other competitors in this space? Does your competitive advantage have these (great to have multiple but must have at least two).</p>
+            <p class="sec-color">	Is your founder extremely specialized in the respective field your business is entering?</p>
+            <p class="sec-color">	Is the market you are entering growing at a rapid pace e.g. 20% YoY growth?</p>
+            <p class="sec-color">	Product advantage (is your product 8-10x times better?)</p>
+            <p class="sec-color">	Do you have a monopoly? Or can you have a monopoly?</p>
+        </ul>
+        </div>
+        </div>
+    </div>
+
+    <div class="square" id="third">
+        <a href="game.html"><p class="nombre animated fadeInLeft" style="font-size: 30px; color: #ffe4b5"> Click Me and Start Now </p></a>
+    </div>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-size: 18px;
+        line-height: 50px;
+    }
+
+.background{
+  	background: linear-gradient(orange,orangered); /* Standard syntax */
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	position: fixed;
+	transition: background .2s ease;
+}
+.purple-color{
+ color: #f6dea3;
+    font-size: 20px
+
+}
+
+.body{
+	position: fixed;
+	top: 10px;
+	left: 10px;
+	right: 10px;
+	bottom: 10px;
+	overflow-y: scroll;
+	transition: background .2s ease;
+}
+.start{
+  background-image:url('../static/cloud.jpg') !important;
+  background-size: cover;
+	background-position: center;
+	position: fixed;
+	top: 10px;
+	left: 10px;
+	right: 10px;
+	bottom: 10px;
+}
+
+.line{
+	height: 1px;
+	width: 80%;
+	background-color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+	animation: mymove2 3s linear;
+  -webkit-transform: translate(20%, -10%);
+  transform: translate(20%, -10%);
+}
+
+
+.center{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.nombre{
+	text-align: center;
+	text-shadow: 0px 10px orange;
+	color: white;
+  font-family: 'Raleway', sans-serif !important;
+  font-size: calc(5.75em + 5.3vmin);
+	font-weight: bold;
+	animation-delay: 0.5s;
+}
+
+
+.line{
+	height: 1px;
+	width: 80%;
+	background-color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+	animation: mymove2 3s linear;
+  -webkit-transform: translate(20%, -10%);
+  transform: translate(20%, -10%);
+}
+
+@keyframes mymove {
+    from {transform: translate(120%, -10%);}
+    to {transform: translate(-120%, -10%);}
+}
+
+@keyframes mymove2 {
+    from {transform: translate(120%, -10%);}
+    to {transform: translate(20%, -10%);}
+}
+
+@keyframes floating {
+	0%{transform: translate(0px, 0px) rotate(0deg);}
+	20% {transform: translate(0px, 7px) rotate(3deg);}
+	40%{transform: translate(0px, -10px) rotate(0 deg);}
+	60% {transform: translate(0px, 7px) rotate(-3deg);}
+	100%{transform: translate(0px, 0px) rotate(0deg);}
+}
+
+
+.line2{
+	height: 1px;
+	width: 80%;
+	background-color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+	animation: mymove 3s linear;
+  -webkit-transform: translate(-120%, -10%);
+  transform: translate(-120%, -10%);
+}
+
+/*PARTE DESPUES DE LA PRESENTACION*/
+
+#first{
+	background-color: coral;
+}
+#first .squareTitleRight{
+	margin-right: 0;
+    font-size: 24px;
+       color: #ee5f5b;
+}
+#first p{
+	font-family: 'Open Sans', sans-serif;
+}
+
+
+/**/
+#second{
+	background-color:wheat;
+    color: #eea236;
+	width: 100%;
+}
+
+#second .squareTitleRight{
+	margin-right: 0;
+       color: #eea236;
+}
+
+#second .squareText{
+	text-align: center;
+	width: 95%;
+}
+
+#third{
+	background-color: darkorange;
+}
+
+#third p {
+	font-family: 'Open Sans', sans-serif;
+}
+
+#third a{
+	color: sandybrown;
+}
+
+
+
+/*CLASES PRINCIPALES------------------------*/
+
+.square{
+	width: 100%;
+	margin: 0 auto;
+	padding-top: 2em;
+	padding-bottom: 2em;
+}
+
+
+p{
+	margin: 0 auto;
+	color: white;
+	line-height: 1.6;
+  font-size: calc(0.9em + 1.3vmin);
+}
+
+@media screen and (max-width: 1000px) {
+
+	.square{
+		width: 100%;
+	}
+
+	.hireClick{
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+    font-size: calc(1.6em + 1.4vmin);
+	}
+}
+
+.hidden {
+    opacity: 0;
+}
+
+
+.displaySee{
+	display: block;
+}
+
+.visible {
+    opacity: 1;
+}
+
+/*waves****************************/
+.box {
+	position: fixed;
+	top: 87%;
+	transform: rotate(60deg);
+	left: 60%;
+}
+.wave {
+	position: fixed;
+	top: 0;
+	left: 0;
+  opacity: .4;
+  position: absolute;
+  top: 13%;
+  left: 0%;
+  background: red;
+  width: 1800px;
+  height: 1800px;
+  margin-left: -150px;
+  margin-top: -250px;
+  transform-origin: 50% 48%;
+  border-radius: 43%;
+  animation: drift 7000ms infinite linear;
+}
+.wave.-three {
+  animation: drift 7500ms infinite linear;
+	position: fixed;
+	background-color: orange;
+}
+.wave.-two {
+  animation: drift 3000ms infinite linear;
+  opacity: .1;
+  background: yellow;
+	position: fixed;
+}
+.box:after {
+  content: '';
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 11;
+  transform: translate3d(0, 0, 0);
+}
+@keyframes drift {
+  from { transform: rotate(0deg); }
+  from { transform: rotate(360deg); }
+}
+/*Animation*/
+.icon:nth-child(2) img {-webkit-animation-delay: 0.2s;animation-delay: 0.2s}
+.icon:nth-child(3) img {-webkit-animation-delay: 0.3s;animation-delay: 0.3s}
+.icon:nth-child(4) img {-webkit-animation-delay: 0.4s;animation-delay: 0.4s}
+.icon img {
+  -webkit-animation: anim 2s ease infinite;
+  animation: anim 2s ease infinite;
+  -webkit-transform: scale(0,0) rotateZ(180deg);
+  transform: scale(0,0) rotateZ(180deg);
+}
+@-webkit-keyframes anim{
+  0% {
+    -webkit-transform: scale(0,0) rotateZ(-90deg);
+    transform: scale(0,0) rotateZ(-90deg);opacity:0
+  }
+  30% {
+    -webkit-transform: scale(1,1) rotateZ(0deg);
+    transform: scale(1,1) rotateZ(0deg);opacity:1
+  }
+  50% {
+    -webkit-transform: scale(1,1) rotateZ(0deg);
+    transform: scale(1,1) rotateZ(0deg);opacity:1
+  }
+  80% {
+    -webkit-transform: scale(0,0) rotateZ(90deg);
+    transform: scale(0,0) rotateZ(90deg);opacity:0
+  }
+}
+@keyframes anim{
+  0% {
+    -webkit-transform: scale(0,0) rotateZ(-90deg);
+    transform: scale(0,0) rotateZ(-90deg);opacity:0
+  }
+  30% {
+    -webkit-transform: scale(1,1) rotateZ(0deg);transform: scale(1,1) rotateZ(0deg);opacity:1
+  }
+  50% {
+    -webkit-transform: scale(1,1) rotateZ(0deg);
+    transform: scale(1,1) rotateZ(0deg);opacity:1
+  }
+  80% {
+    -webkit-transform: scale(0,0) rotateZ(90deg);
+    transform: scale(0,0) rotateZ(90deg);opacity:0
+  }
+}
+
+
+.list li {
+
+	animation: fadeIn 2s ease-in both;
+}
+
+.list li:nth-child(2) {
+	animation-delay: 1s;
+}
+.list li:nth-child(3) {
+	animation-delay: 2s;
+}
+.list li:nth-child(4) {
+	animation-delay: 3s;
+}
+.list li:nth-child(5) {
+	animation-delay: 4s;
+}
+.list li:nth-child(6) {
+	animation-delay: 5s;
+}
+.list li:nth-child(7) {
+	animation-delay: 6s;
+}
+.list li:nth-child(8) {
+	animation-delay: 7s;
+}
+.list li:nth-child(9) {
+	animation-delay: 8s;
+}
+.list li:nth-child(10) {
+	animation-delay: 9s;
+}
+.list li:nth-child(11) {
+	animation-delay: 10s;
+}
+.list li:nth-child(12) {
+	animation-delay: 11s;
+}
+.list li:nth-child(13) {
+	animation-delay: 12s;
+}
+.list li:nth-child(14) {
+	animation-delay: 13s;
+}
+.list li:nth-child(15) {
+	animation-delay: 14s;
+}
+.list li:nth-child(16) {
+	animation-delay: 15s;
+}
+.list li:nth-child(17) {
+	animation-delay: 16s;
+}
+.list li:nth-child(18) {
+	animation-delay: 17s;
+}
+
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translate3d(0, -20%, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+</style>
+
+
+</body>
+</html>
